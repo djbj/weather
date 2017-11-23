@@ -26,18 +26,18 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Stockholm,Sweden&units=m
     const sunriseToday = new Date(json.sys.sunrise * 1000);
     const sunsetToday = new Date(json.sys.sunset * 1000)
 
-    document.getElementById("sunrise").innerHTML = "Sunrise today: " + sunriseToday
-    document.getElementById("sunset").innerHTML = "Sunset today: " + sunsetToday
+    document.getElementById("sunrise").innerHTML = "Sunrise today at " + sunriseToday.toTimeString()
+    document.getElementById("sunset").innerHTML = "Sunset today at " + sunsetToday.toLocaleTimeString()
     // document.body.style.backgroundImage = "url('img_tree.png')";
     // console.log(tag)
     // console.log("Sunrise in milliseconds": json.sys.sunrise * 1000))
 
 
-    console.log(sunriseToday.getHours() + ":" + sunriseToday.getMinutes())
+    console.log(sunriseToday.toTimeString() + ":" + sunriseToday.getMinutes() + "hello")
     console.log(sunsetToday)
     // document.write(myDate.toGMTString()+"<br>"+myDate.toLocaleString());
 
-
+    console.log(sunriseToday.toTimeString())
 
   }
 

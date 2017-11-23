@@ -11,11 +11,18 @@
   </head>
   <body>
     <!-- Add your code here! -->
+    <select id="citySelection" name="cities" onchange="myFunction()">
+      <option value="stockholm">Stockholm</option>
+      <option value="reykjavik">Reykjavik</option>
+      <option value="london">London</option>
+      <option value="sydney">Sydney</option>
+    </select>
     <h1>Todays weather in</h1>
     <h2 id="cityHeading"></h2>
     <h3 id = celciusCondition></h3>
     <p id="sunrise"></p>
     <p id="sunset"></p>
+    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
     <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>
