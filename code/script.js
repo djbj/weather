@@ -3,7 +3,11 @@
 
 const myFunction = () => {
 
-  fetch("http://api.openweathermap.org/data/2.5/weather?q=" + document.getElementById("citySelection").value + "&units=metric&APPID=a345d6bdc7e76fdc9f5de496e9687533")
+  const fetchCity = "http://api.openweathermap.org/data/2.5/weather?q=" +
+    document.getElementById("citySelection").value +
+    "&units=metric&APPID=a345d6bdc7e76fdc9f5de496e9687533"
+
+  fetch(fetchCity)
   .then(
     (response) => {
       //console.log(response)
@@ -49,5 +53,5 @@ const myFunction = () => {
   )
 }
 
-
+window.onload = myFunction;
 document.getElementById("citySelection").addEventListener("change", myFunction);
