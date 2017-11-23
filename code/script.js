@@ -10,7 +10,6 @@ const myFunction = () => {
   fetch(fetchCity)
   .then(
     (response) => {
-      //console.log(response)
       return response.json()
     }).then((json) => {
       console.log(json)
@@ -22,13 +21,19 @@ const myFunction = () => {
       console.log(json.weather[0].icon)
       const urlWeatherImage = "url(" + "'" + "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png" + "')"
       console.log(urlWeatherImage)
+
       // <img src="smiley.gif">
       //const imageGenerator = "<img src=\""+urlWeatherImage+"\">"
       //console.log(imageGenerator)
       // document.getElementById("weatherImage").innerHTML = imageGenerator
       //console.log(urlWeatherImage)
       //const tag = document.getElementsByTagName("h3")[0].style.background-image: url("urlWeatherImage");
+
+
       document.body.style.backgroundImage = urlWeatherImage
+      // document.getElementById("image").style.backgroundImage = urlWeatherImage
+      // document.getElementById("image").style.backgroundSize = "cover"
+      // document.body.style.backgroundSize = "cover"
 
       const sunriseToday = new Date(json.sys.sunrise * 1000);
       const sunsetToday = new Date(json.sys.sunset * 1000)
